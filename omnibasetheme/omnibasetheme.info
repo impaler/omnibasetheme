@@ -1,0 +1,12 @@
+name = omnibasetheme
+description = OmniBaseTheme root structure for drupal theme
+core = 7.x
+engine = phptemplate
+
+dependencies[] = less
+dependencies[] = pathauto
+dependencies[] = drupalUtils
+
+stylesheets[all][] = styles/site.less
+
+scripts[] = scripts/site.js
