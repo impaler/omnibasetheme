@@ -1,7 +1,7 @@
 <?php
 
 //todo take out this is only for dev mode
-drupal_theme_rebuild ();
+//drupal_theme_rebuild ();
 
 /**
  * Use include for preprocess for organisation

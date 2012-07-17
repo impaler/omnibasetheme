@@ -7,6 +7,6 @@ dependencies[] = less
 dependencies[] = pathauto
 dependencies[] = drupalUtils
 
-stylesheets[all][] = styles/site.less
+stylesheets[all][] = styles/base.less
 
 scripts[] = scripts/site.js
