@@ -3,9 +3,7 @@
 
 <?php include( path_to_theme () . '/templates/core/header.tpl.php' ); ?>
 
-
-<?php include( path_to_theme () . '/templates/core/book/content.tpl.php' ); ?>
-
+<?php include( path_to_theme () . '/templates/core/content.tpl.php' ); ?>
 
 <?php include( path_to_theme () . '/templates/core/footer.tpl.php' ); ?>
 

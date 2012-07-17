@@ -2,9 +2,7 @@
 
 <!--
 
-_  _ ____ _  _ ____ ___  ____ _  _
-|__| |__|  \/  |___ |  \ |___ |  |
-|  | |  | _/\_ |___ |__/ |___  \/
+OMNI THEME BASE
 
 -->
 
@@ -16,9 +14,8 @@ _  _ ____ _  _ ____ ___  ____ _  _
 
     <?php print $styles; ?>
 
-<!--    <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>-->
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
-
+    <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+    
     <?php print $scripts; ?>
 
 </head>
