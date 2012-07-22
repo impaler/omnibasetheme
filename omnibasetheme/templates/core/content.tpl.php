@@ -1,5 +1,5 @@
 
-<?php include( path_to_theme () . '/templates/core/page-content-header.tpl.php' ); ?>
+<?php include( drupal_get_absolute_theme_path( 'omnibasetheme' ) . '/templates/core/page-content-header.tpl.php' ); ?>
 
 <!-- ______________________ Page Content _______________________ -->
 
@@ -21,3 +21,4 @@
 </section>
 
 <!-- ______________________ / Page Content _______________________ -->
+logo.png

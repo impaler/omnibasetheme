@@ -1,8 +1,8 @@
 <?php
 
-function preprocess_node_template_suggestions ( $vars ) {
+function preprocess_Templates ( &$vars ) {
     //generate template suggestions based on the Pathauto alias generated
-    if ( module_exists ( 'path' ) ) {
+   if ( module_exists ( 'path' ) ) {
         //gets the "clean" URL of the current page
         $alias = drupal_get_path_alias ( $_GET[ 'q' ] );
         $vars[ 'alias' ] = $alias;
@@ -39,4 +39,5 @@ function preprocess_node_template_suggestions ( $vars ) {
     }
 
     return $vars;
+    
 }

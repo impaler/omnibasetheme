@@ -1,12 +1,10 @@
 <?php
 
-//todo take out this is only for dev mode
-//drupal_theme_rebuild ();
-
 /**
  * Use include for preprocess for organisation
- */
-include( path_to_theme () . '/preprocess/preprocess.inc' );
+ */ 
+
+include(  drupal_get_absolute_theme_path( 'omnibasetheme' ) . '/preprocess/preprocess.inc' );
 
 /**
  * Preprocess drupal pages
@@ -15,9 +13,14 @@ include( path_to_theme () . '/preprocess/preprocess.inc' );
  * @param $vars
  */
 function omnibasetheme_preprocess_page ( &$vars ) {
+    
     //setup the template suggestions
     if ( isset( $vars[ 'node' ] ) ) {
-        $vars = preprocess_node_template_suggestions ( $vars );
+
+        
+        $vars = preprocess_Templates ( $vars );
+        
+
     }
 
     //use to display available templates
@@ -25,6 +28,9 @@ function omnibasetheme_preprocess_page ( &$vars ) {
 //    drupal_set_message_array ( $suggestions );
 
 }
+
+
+
 
 /**
  * No core css
