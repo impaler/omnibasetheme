@@ -1,55 +1,44 @@
-
 <!-- ______________________ Page Header _______________________ -->
 
 <header>
-
+    <div class = "wrapper">
+    <div class="grids">
+        
+    <?php if ( isset( $messages ) ): ?>
     <div class = "grid-12 messages">
 
-        <?php if ( isset( $messages ) ): ?>
-        <div class = "grid-12">
-
-            <?php print $messages; ?>
-
-        </div>
-        <?php endif; ?>
+        <?php print $messages; ?>
 
     </div>
+    <?php endif; ?>
 
+    <?php if ( isset( $breadcrumb ) ): ?>
     <div class = "grid-12 breadcrumb">
 
-        <?php if ( isset( $breadcrumb ) ): ?>
-        <div class = "grid-12">
-
-            <?php print $breadcrumb; ?>
-
-        </div>
-        <?php endif; ?>
+        <?php print $breadcrumb; ?>
 
     </div>
+    <?php endif; ?>
 
+    <?php if ( isset( $titleH1 ) ): ?>
     <div class = "grid-12 title">
 
-        <?php if ( isset( $title ) ): ?>
-        <div class = "grid-12">
-
-            <?php print $title; ?>
-
-        </div>
-        <?php endif; ?>
+        <?php print $titleH1 ?>
 
     </div>
+    <?php endif; ?>
 
+    <?php if ( isset( $tabs ) ): ?>
     <div class = "grid-12 tabs">
 
-        <?php if ( isset( $tabs ) ): ?>
-        <div class = "grid-12">
-
-            <?php print $tabs; ?>
-
-        </div>
-        <?php endif; ?>
+        <?php print $tabs; ?>
 
     </div>
+    <?php endif; ?>
+        
+    </div>
+    </div>
+
 
 </header>
 

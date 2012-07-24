@@ -2,9 +2,9 @@
 
 /**
  * Use include for preprocess for organisation
- */ 
+ */
 
-include(  drupal_get_absolute_theme_path( 'omnibasetheme' ) . '/preprocess/preprocess.inc' );
+include( drupal_get_absolute_theme_path ( 'omnibasetheme' ) . '/preprocess/preprocess.inc' );
 
 /**
  * Preprocess drupal pages
@@ -13,11 +13,18 @@ include(  drupal_get_absolute_theme_path( 'omnibasetheme' ) . '/preprocess/prepr
  * @param $vars
  */
 function omnibasetheme_preprocess_page ( &$vars ) {
-    
+
     //setup the template suggestions
     if ( isset( $vars[ 'node' ] ) ) {
         $vars = preprocess_Templates ( $vars );
     }
+
+    //prerender the tabs
+    $vars[ 'tabs' ] = render ( $vars[ 'tabs' ] );
+
+    //simplify the tpl markup
+    $vars[ 'title' ] = drupal_get_title ();
+    $vars[ 'titleH1' ] = "<h1>" . $vars[ 'title' ] . "</h1>";
 
     //use to display available templates
 //    $suggestions = &$vars[ 'theme_hook_suggestions' ];
