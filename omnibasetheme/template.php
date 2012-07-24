@@ -16,11 +16,7 @@ function omnibasetheme_preprocess_page ( &$vars ) {
     
     //setup the template suggestions
     if ( isset( $vars[ 'node' ] ) ) {
-
-        
         $vars = preprocess_Templates ( $vars );
-        
-
     }
 
     //use to display available templates
@@ -28,9 +24,6 @@ function omnibasetheme_preprocess_page ( &$vars ) {
 //    drupal_set_message_array ( $suggestions );
 
 }
-
-
-
 
 /**
  * No core css
