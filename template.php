@@ -23,8 +23,10 @@ function omnibasetheme_preprocess_page ( &$vars ) {
     $vars[ 'tabs' ] = render ( $vars[ 'tabs' ] );
 
     //simplify the tpl markup
-    $vars[ 'title' ] = drupal_get_title ();
-    $vars[ 'titleH1' ] = "<h1>" . $vars[ 'title' ] . "</h1>";
+    $title = drupal_get_title ();
+    if ( !empty($title) ) {
+        $vars[ 'titleH1' ] = "<h1>" . $title . "</h1>";
+    }
 
     //use to display available templates
 //    $suggestions = &$vars[ 'theme_hook_suggestions' ];
@@ -39,7 +41,7 @@ function omnibasetheme_preprocess_page ( &$vars ) {
  */
 function omnibasetheme_css_alter ( &$css ) {
     $exclude = array (
-        'misc/vertical-tabs.css' => FALSE ,
+//        'misc/vertical-tabs.css' => FALSE ,
         'modules/aggregator/aggregator.css' => FALSE ,
         'modules/block/block.css' => FALSE ,
         'modules/book/book.css' => FALSE ,
