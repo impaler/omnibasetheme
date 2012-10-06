@@ -34,8 +34,23 @@ function preprocess_Templates ( &$vars ) {
             array ( $type ) ,
             theme_get_suggestions ( $args , $type )
         );
+       
+       //custom page edit form by type eg;
+       //       page__edit__type
+       //       page__node__add__type
+       $yes = false;
+       foreach ($suggestions as $thing) {
+           if ( $thing == 'page__edit' ) {
+               $yes = true;
+           }
+       }
 
-        $vars['theme_hook_suggestions'][] = 'page__'. $vars['node']->type;
+       if ( $yes == false) {
+           $vars['theme_hook_suggestions'][] = 'page__'. $vars['node']->type;
+       } else {
+           $vars['theme_hook_suggestions'][] = 'page__edit__'. $vars['node']->type;
+       }
+       
     }
 
     return $vars;
