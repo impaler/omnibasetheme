@@ -59,9 +59,7 @@ function preprocess_Templates ( &$vars ) {
            }
        }
 
-       if ( $delete_form == false) {
-           $vars['theme_hook_suggestions'][] = 'page__'. $vars['node']->type;
-       } else {
+       if ( !$delete_form == false) {
            $vars['theme_hook_suggestions'][] = 'page__delete';
        }
        
