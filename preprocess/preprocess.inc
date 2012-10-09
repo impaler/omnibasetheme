@@ -38,18 +38,33 @@ function preprocess_Templates ( &$vars ) {
        //custom page edit form by type eg;
        //       page__edit__type
        //       page__node__add__type
-       $yes = false;
+       $edit_form = false;
        foreach ($suggestions as $thing) {
            if ( $thing == 'page__edit' ) {
-               $yes = true;
+               $edit_form = true;
            }
        }
 
-       if ( $yes == false) {
+       if ( $edit_form == false) {
            $vars['theme_hook_suggestions'][] = 'page__'. $vars['node']->type;
        } else {
            $vars['theme_hook_suggestions'][] = 'page__edit__'. $vars['node']->type;
        }
+       
+       
+       $delete_form = false;
+       foreach ($suggestions as $thing) {
+           if ( $thing == 'page__delete' ) {
+               $delete_form = true;
+           }
+       }
+
+       if ( $delete_form == false) {
+           $vars['theme_hook_suggestions'][] = 'page__'. $vars['node']->type;
+       } else {
+           $vars['theme_hook_suggestions'][] = 'page__delete';
+       }
+       
        
     }
 
