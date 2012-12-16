@@ -63,6 +63,17 @@ function preprocess_Templates ( &$vars ) {
            $vars['theme_hook_suggestions'][] = 'page__delete';
        }
        
+       $page__moderation = false;
+       foreach ($suggestions as $thing) {
+           if ( $thing == 'page__moderation' ) {
+               $page__moderation = true;
+           }
+       }
+
+       if ( !$page__moderation == false) {
+           $vars['theme_hook_suggestions'][] = 'page__moderation';
+       }
+       
        
     }
 
